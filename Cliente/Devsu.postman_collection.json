@@ -1,0 +1,435 @@
+{
+	"info": {
+		"_postman_id": "77f9e86e-7ad9-4de1-ace8-a720db032731",
+		"name": "Devsu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20556718"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "insertCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Luis Delzo\",\n    \"gender\": \"Male\",\n    \"age\": 24,\n    \"identification\": \"66666666\",\n    \"address\": \"Separadora Industrial 221\",\n    \"phone\": \"5189656325\",\n    \"password\": \"@This1sStr0ngp4ssw0rd@3\",\n    \"status\": true\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/clientes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"clientes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCustomers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/clientes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"clientes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCustomerById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/clientes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"clientes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCustomer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/clientes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"clientes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Luis Delzo\",\n    \"gender\": \"Male\",\n    \"age\": 24,\n    \"identification\": \"66666666\",\n    \"address\": \"Separadora Industrial 221\",\n    \"phone\": \"5189656325\",\n    \"password\": \"@This1sStr0ngp4ssw0rd@3\",\n    \"status\": true\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/clientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "partialUpdateCustomer",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\": \"Av. Santiago de Surco 234, Surco\",\n    \"age\": 69\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/clientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "getAllAccounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/cuentas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"cuentas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountByAccountNumber",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/cuentas/45698524",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"cuentas",
+								"45698524"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accountNumber\": 45698525,\n    \"accountType\": \"SAVINGS\",\n    \"initialBalance\": 6000,\n    \"status\": false,\n    \"customerId\": 1\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/cuentas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"cuentas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAccount",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/cuentas/45698524",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"cuentas",
+								"45698524"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAccount",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{        \n        \"accountType\": \"CHECKING\",\n        \"initialBalance\": 250.0,\n        \"status\": true,\n        \"customerId\": 52\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/cuentas/45698524",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"cuentas",
+								"45698524"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "partialUpdateAccount",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{        \n        \"initialBalance\": 10000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/cuentas/7456985",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"cuentas",
+								"7456985"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "getAllTransactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/movimientos/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"movimientos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTransactionById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/movimientos/52",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"movimientos",
+								"52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertTransaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accountNumber\": 45698524,\n    \"transactionType\": \"CREDIT\",\n    \"value\": 5000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/movimientos/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"movimientos",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "getReportByCustromerIdAndDateRange",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/reportes?customerId=1&startDate=2023-12-23&endDate=2023-12-23",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"reportes"
+							],
+							"query": [
+								{
+									"key": "customerId",
+									"value": "1"
+								},
+								{
+									"key": "startDate",
+									"value": "2023-12-23"
+								},
+								{
+									"key": "endDate",
+									"value": "2023-12-23"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
